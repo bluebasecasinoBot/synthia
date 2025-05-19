@@ -71,7 +71,7 @@ __SYD.p1_mainHeader = () =>{
             text-transform:uppercase;font-weight:900;font-size:${SYD_VAR.page1MainFont_1.get()};text-shadow:unset;color:#03cefc;font-family:font1;`
         },
         [
-            __c("p" , {} , ["synth-ai"])
+            __c("p" , {} , ["synthia"])
         ]
     )
 }
