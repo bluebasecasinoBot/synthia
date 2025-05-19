@@ -4,7 +4,7 @@ __SYD.navBar = () =>{
     return __c(
         "nav",
         {
-            style:`overflow-y:hidden;position:absolute;left:50%;transform:translateX(-50%);min-height:90px;max-height:${__p(["navBar" , "mobileNavExpand"], false) ? "700px" : "90px"};width:100%;border-radius:15px;padding:0 ${__p(["navBar" , "mobilePadState"], false) ? "10px" : "50px"};background: transparent;transition:all ease-out .4s;display:flex;align-items:flex-start;z-index:999;`
+            style:`overflow-y:hidden;position:absolute;left:50%;transform:translateX(-50%);min-height:90px;max-height:${__p(["navBar" , "mobileNavExpand"], false) ? "700px" : "90px"};width:100%;border-radius:15px;padding:0 ${__p(["navBar" , "mobilePadState"], false) ? "15px" : "50px"};background: transparent;transition:all ease-out .4s;display:flex;align-items:flex-start;z-index:999;`
         },
         [
             __SYD.navLogo(),
