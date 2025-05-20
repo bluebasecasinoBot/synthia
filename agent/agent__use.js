@@ -5,13 +5,13 @@ __SYD.agent_use_chat_main = () =>{
     return __c(
         "div",
         {
-            style:`padding-top:50px;height:100%;width:100%;max-width:1000px;background:#000;backdrop-filter: blur(10px);border: 1px solid rgba(0, 255, 255, 0.4);box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);display:${__p(["userAgentAi__sections_main" , "section2"] , false) ? "flex" : "none"};justify-content:center;align-items:center;min-height:100vh;`
+            style:`padding-top:50px;height:100%;width:100%;max-width:1000px;background:#000;backdrop-filter: blur(10px);border: 1px solid rgba(0, 255, 255, 0.4);display:${__p(["userAgentAi__sections_main" , "section2"] , false) ? "flex" : "none"};justify-content:center;align-items:center;min-height:100vh;`
         },
         [
             __c(
                 "h2",
                 {
-                    style:"font-size:18px;color: #03cefc ;font-weight:700;text-transform:capitalize;margin-bottom:16px;position:absolute;left:50%;transform:translateX(-50%);top:20px;font-family:shine;text-shadow:2px 2px 1px #141414;text-align:center;width:100%;pointer-events:none;opacity:.7;"
+                    style:"font-size:18px;color: #03cefc ;font-weight:700;text-transform:capitalize;margin-bottom:16px;position:absolute;left:50%;transform:translateX(-50%);top:20px;font-family:shine;text-shadow:2px 2px 1px #141414;text-align:center;width:100%;pointer-events:none;opacity:1;"
                 },
                 [
                     "Agent -" , __c("span" , {style:"color:#03cefc;"},[` ${__p(["userAgentAi__sections_main" , "agentLoginInfo" , "agentName"] , "Agent name")}`.toUpperCase()])
