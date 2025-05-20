@@ -5,16 +5,16 @@ __SYD.agent_use_chat_main = () =>{
     return __c(
         "div",
         {
-            style:`padding-top:50px;height:100%;width:100%;max-width:1000px;background:#fff;backdrop-filter: blur(10px);border: 1px solid rgba(0, 255, 255, 0.4);box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);display:${__p(["userAgentAi__sections_main" , "section2"] , false) ? "flex" : "none"};justify-content:center;align-items:center;min-height:100vh;`
+            style:`padding-top:50px;height:100%;width:100%;max-width:1000px;background:#000;backdrop-filter: blur(10px);border: 1px solid rgba(0, 255, 255, 0.4);box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);display:${__p(["userAgentAi__sections_main" , "section2"] , false) ? "flex" : "none"};justify-content:center;align-items:center;min-height:100vh;`
         },
         [
             __c(
                 "h2",
                 {
-                    style:"font-size:18px;color: #8A63F7;font-weight:500;text-transform:capitalize;margin-bottom:16px;position:absolute;left:50%;transform:translateX(-50%);top:20px;font-family:shine;text-shadow:2px 2px 1px #141414;text-align:center;width:100%;pointer-events:none;opacity:.7;"
+                    style:"font-size:18px;color: #03cefc ;font-weight:700;text-transform:capitalize;margin-bottom:16px;position:absolute;left:50%;transform:translateX(-50%);top:20px;font-family:shine;text-shadow:2px 2px 1px #141414;text-align:center;width:100%;pointer-events:none;opacity:.7;"
                 },
                 [
-                    "Agent -" , __c("span" , {style:"color:#8A63F7;text-shadow:2px 2px 1px #141414 , 0 0 1px #000 , 0 0 6px rgb(170, 142, 247);"},[` ${__p(["userAgentAi__sections_main" , "agentLoginInfo" , "agentName"] , "Agent name")}`.toUpperCase()])
+                    "Agent -" , __c("span" , {style:"color:#03cefc;"},[` ${__p(["userAgentAi__sections_main" , "agentLoginInfo" , "agentName"] , "Agent name")}`.toUpperCase()])
                 ]
             ),
             __c(
@@ -158,12 +158,13 @@ __SYD.chatArea__agent = () =>{
                 {},[],{type:"chatScroll"}
             ),
             __c(
-                "i",
+                "span",
                 {
-                    style:`display:${__p(['agent_use_chat_main' , 'agentResponseAwait'],false) ? "flex" : "none"};height:20px;width:20px;font-size:20px;min-width:20px;color:#8A63F7;align-self:flex-start;`,
-                    class:"fa-solid fa-robot text_opacity_animation"
-                }
-            )
+                    style:`display:${__p(['agent_use_chat_main' , 'agentResponseAwait'],false) ? "flex" : "none"};height:40px;width:40px;align-items:center;justify-content:center;border-radius:50%;font-size:20px;min-width:20px;color:#8A63F7;border-bottom:2px solid #03cefc;background-image:url(../assets/main.png);`,
+                    class:"text_opacity_animation"
+                },
+                [],{genericStyle:["bg_fit"]}
+            ),
         ]
     )
 }
@@ -184,11 +185,11 @@ __SYD.messageTab = () =>{
     return __c(
         "div",
         {
-            style:"height:140px;width:100%;background:inherit;min-height:140px;display:flex;gap:10px;border-radius:15px;position:relative;padding:10px;background:rgba(0, 0, 0, 0.1);"
+            style:"height:140px;width:100%;background:inherit;min-height:140px;display:flex;gap:10px;border-radius:15px;position:relative;padding:10px;background:rgba(12, 12, 12);"
         },
         [
             __SYD.userTextCount(),
-            __SYD.textArea_type_text({name:"agentname__id" , type:"text" , ph:"Enter your message" , w:"500" , size:"16px" , inject:"box-shadow:unset;font-family:monospace;height:80px;border-radius:inherit;width:100%;resize:none;padding:16px;border:none;border-bottom:1px solid #171717;" , cls:"" , fnc:{oninput:e =>{
+            __SYD.textArea_type_text({name:"agentname__id" , type:"text" , ph:"Enter your message" , w:"500" , size:"16px" , inject:"box-shadow:unset;font-family:monospace;height:80px;border-radius:inherit;width:100%;resize:none;padding:16px;border:none;background:#000;color:#ffffff;" , cls:"" , fnc:{oninput:e =>{
                 __p(['createAI__sections_main' , 'editName'])(e.target.value)
             }} , stateCred:{type:"chat_msg_tab"} , fnc:{
                 oninput: e =>{
@@ -196,7 +197,7 @@ __SYD.messageTab = () =>{
                 }
             }}),
 
-            __c("i" , {style:`border-radius:inherit;font-size:25px;text-align:center;color:#fff;font-weight:900;height:50px;min-width:50px;background:#8A63F7;display:flex;align-items:center;justify-content:center;${__p(["agent_use_chat_main" , "startAutoType"] , false) ? "opacity:.6;pointer-events:none;" : ""}` , class:`${"fa-solid fa-paper-plane"} click`},[],{
+            __c("i" , {style:`border-radius:inherit;font-size:25px;text-align:center;height:50px;min-width:50px;background:#000;color:#03cefc;display:flex;align-items:center;justify-content:center;${__p(["agent_use_chat_main" , "startAutoType"] , false) ? "opacity:.6;pointer-events:none;" : ""}` , class:`${"fa-solid fa-paper-plane"} click`},[],{
                 events:{
                     onclick:async e =>{
                         if(!__p(["agent_use_chat_main" , "startAutoType"] , false))
@@ -224,7 +225,7 @@ __SYD.messageTab = () =>{
                                         return `->admin_msg: Your_name_is:${customisation.agentName},personality:${customisation.personality},responseTone:${customisation.responseTone},responseFormat:${customisation.responseFormat},expertise:${customisation.expertise},askQuestions:${customisation.askQuestion},be_very_brief`
                                     }
     
-                                    await fetch('https://alita-ai-server.fly.dev/agent_chat', {
+                                    await fetch('https://synthia-server.fly.dev/agent_chat', {
                                         method: 'POST',
                                         headers: {
                                             'Content-Type': 'application/json'
@@ -302,19 +303,19 @@ __SYD.chatTabs__agent = ({msg = ""}) =>{
         },
         [
             __c(
-                "i",
+                "span",
                 {
-                    style:"height:40px;width:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:20px;min-width:20px;color:#8A63F7;border:2px solid #8A63F7;",
-                    class:"fa-solid fa-robot"
+                    style:"height:40px;width:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:20px;min-width:20px;color:#8A63F7;border-bottom:2px solid #03cefc;background-image:url(../assets/main.png);",
+                    // class:"fa-solid fa-robot"
                 },
                 [
                     // "🤖"
-                ]
+                ],{genericStyle:["bg_fit"]}
             ),
             __c(
                 "div",
                 {
-                    style:"padding:15px 10px;min-height:fit-content;width:fit-content;background:transparent;max-width:90%;border-radius:15px;border-top-left-radius:unset;color:#16143a;"
+                    style:"padding:15px 10px;min-height:fit-content;width:fit-content;background:transparent;max-width:90%;border-radius:15px;border-top-left-radius:unset;color:#fff;"
                 },
                 [
                     ...message()
@@ -352,7 +353,7 @@ __SYD.chatTabs__user = ({msg = ""}) =>{
             __c(
                 "div",
                 {
-                    style:"padding:15px 10px;min-height:fit-content;width:fit-content;background:#16143a;max-width:70%;border-radius:15px;border-top-right-radius:unset;"
+                    style:"padding:15px 10px;min-height:fit-content;width:fit-content;background:transparent;max-width:70%;border-radius:15px;border-top-right-radius:unset;border:1px solid grey;"
                 },
                 [
                     ...message()
@@ -361,7 +362,7 @@ __SYD.chatTabs__user = ({msg = ""}) =>{
             __c(
                 "i",
                 {
-                    style:"height:40px;width:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:20px;min-width:20px;border:2px solid #246696;color:#F4D03F;",
+                    style:"height:40px;width:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:20px;min-width:20px;border:2px solid #03cefc;color:#F4D03F;",
                     class:"fa-solid fa-user-secret"
                 },
                 [

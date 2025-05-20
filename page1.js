@@ -4,7 +4,7 @@ __SYD.p1 = () =>{
     return __c(
         "div",
         {
-            style:`height:fit-content;width:100%;min-height:fit-content;padding-top:150px;padding-bottom:20px;display:flex;justify-content:center;background:transparent;border:1px solid grey;margin-bottom:30px;`,
+            style:`height:fit-content;width:100%;min-height:fit-content;padding-top:150px;padding-bottom:20px;display:flex;justify-content:center;background:transparent;border:1px solid #333;margin-bottom:30px;`,
             id:"p1"
         },
         [
@@ -34,7 +34,7 @@ __SYD.p1SubHeader = () =>{
             __c(
                 "div",
                 {
-                    style:`${__p(["p1SubHeader" , "breakVal"],false) ? "height:300px;width:300px" : "height:500px;width:500px"};display:flex;flex-direction:column;gap:20px;;border-radius:50%;background-image:url(./assets/main.png);border-radius:50%;border-bottom:5px solid #03cefc;`,
+                    style:`${__p(["p1SubHeader" , "breakVal"],false) ? "height:300px;width:300px" : "height:500px;width:500px"};display:flex;flex-direction:column;gap:20px;;border-radius:50%;background-image:url(./assets/main.png);border-radius:50%;border-bottom:5px solid #015484;`,
                     // class:"floatMainPic"
                 },[
                     __c(
@@ -68,7 +68,7 @@ __SYD.p1_mainHeader = () =>{
         "div",
         {
             style:`text-shadow:1px 1px 0px #fff,2px 2px 0px #fff,3px 3px 0px #fff,4px 4px 0px #fff;text-align:center;
-            text-transform:uppercase;font-weight:900;font-size:${SYD_VAR.page1MainFont_1.get()};text-shadow:unset;color:#03cefc;font-family:font1;`
+            text-transform:uppercase;font-weight:900;font-size:${SYD_VAR.page1MainFont_1.get()};text-shadow:unset;color:#015484;font-family:font1;`
         },
         [
             __c("p" , {} , ["synthia"])
@@ -79,7 +79,7 @@ __SYD.p1_mainHeader = () =>{
 __SYD.p1_subText = () =>{
     return __c(
         "div",
-        {},
+        {style:"width:100%;display:flex;justify-content:center;"},
         [
             __c("p" , {style:SYD_VAR.pag1SubText.get() + "padding:10px;" , class:"target_div"},["Synthia is AI, decentralized. Powered by Ethereum, driven by intelligence."])
         ]

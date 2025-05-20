@@ -14,7 +14,7 @@ __SYD.container = () =>{
                 method:"add",style:{backgroundImage:'url(./assets/bg_main.png)',
                     backgroundAttachment: 'fixed',
                     backgroundPosition:'top center',}
-            }) + "background-size:cover;background-position:center top;background-repeat: no-repeat;"
+            }) + "background-size:cover;background: rgb(12, 12, 12) ;background-position:center top;background-repeat: no-repeat;"
         },
         [
             // __SYD.MainCanvas(),

@@ -164,7 +164,7 @@ __SYD.fetchAgent = () =>{
     return __c(
         "div",
         {
-            style:`height:fit-content;min-height:fit-content;max-width:600px;width:90%;border-radius:20px;display:${__p(["userAgentAi__sections_main" , "section1"] , false) ? "flex" : "none"};justify-content:center;align-items:center;row-gap:30px;padding:30px 30px;flex-direction:column;background: rgba(22, 20, 58, 0.74);backdrop-filter: blur(10px);border: 1px solid rgba(255, 255, 255);box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);`
+            style:`height:fit-content;min-height:fit-content;max-width:600px;width:90%;border-radius:20px;display:${__p(["userAgentAi__sections_main" , "section1"] , false) ? "flex" : "none"};justify-content:center;align-items:center;row-gap:30px;padding:30px 30px;flex-direction:column;background-color: #000000 ;border: 1px solid grey;`
         },
         [
             __c(
@@ -233,21 +233,21 @@ __SYD.infoSection___accessAgent = ({text = "" , ph = ""} = {}) =>{
     return __c(
         "div",
         {
-            style:"padding:20px 16px;background:#fff;box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);display:flex;flex-direction:column;row-gap:10px;border-radius:15px;width:100%;",
-            class:"tab_design_3d_main"
+            style:"padding:20px 16px;background:rgb(12 , 12 , 12);display:flex;flex-direction:column;row-gap:10px;border-radius:15px;width:100%;",
+            // class:"tab_design_3d_main"
         },
         [
             __c(
                 "h2",
                 {
-                    style:"font-size:16px;color:#16143a;font-weight:500;text-transform:capitalize;margin-bottom:16px;font-family:shine;",
+                    style:"font-size:16px;color:#fff;font-weight:500;text-transform:capitalize;margin-bottom:16px;font-family:shine;",
                     class:"spaceCharacters"
                 },
                 [
                     `${text}`
                 ]
             ),
-            __SYD.input_type_text({name:"agentname__id" , type:"text" , ph:ph , w:"500" , size:"16px" , inject:"background:#333;box-shadow:unset;font-family:monospace;height:60px;border-radius:inherit;transform:unset;" , cls:"launch_btn tab_design_3d" , fnc:{oninput:e =>{
+            __SYD.input_type_text({name:"agentname__id" , type:"text" , ph:ph , w:"500" , size:"16px" , inject:"background: #000000 ;box-shadow:unset;font-family:monospace;height:60px;border-radius:inherit;transform:unset;border:1px solid grey;color:#fff;" , cls:"" , fnc:{oninput:e =>{
                 __p(['createAI__sections_main' , 'editName'])(e.target.value)
             }} , stateProps:{type:"agentCredinfo"}}),
         ]

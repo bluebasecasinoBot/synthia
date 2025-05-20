@@ -4,7 +4,7 @@ __SYD.navBar = () =>{
     return __c(
         "nav",
         {
-            style:`overflow-y:hidden;position:absolute;left:50%;transform:translateX(-50%);min-height:90px;max-height:${__p(["navBar" , "mobileNavExpand"], false) ? "700px" : "90px"};width:100%;border-radius:15px;padding:15px ${__p(["navBar" , "mobilePadState"], false) ? "15px" : "50px"};background: transparent;transition:all ease-out .4s;display:flex;align-items:flex-start;z-index:999;`
+            style:`overflow-y:hidden;position:absolute;left:50%;transform:translateX(-50%);min-height:90px;max-height:${__p(["navBar" , "mobileNavExpand"], false) ? "700px" : "90px"};width:100%;border-radius:15px;padding:15px ${__p(["navBar" , "mobilePadState"], false) ? "10px" : "50px"};background: transparent;transition:all ease-out .4s;display:flex;align-items:flex-start;z-index:999;`
         },
         [
             __SYD.navLogo(),
@@ -36,7 +36,7 @@ __SYD.navLogo = () =>{
     return __c(
         "a",
         {
-            style:`min-height:50px;min-width:50px;position:absolute;top:21px;left:${__p(["navBar" , "mobilePadState"], false) ? "10px" : "50px"};background-image:url("./assets/logo.png");border-radius:50%;`,
+            style:`min-height:50px;min-width:50px;position:absolute;top:21px;left:${__p(["navBar" , "mobilePadState"], false) ? "30px" : "50px"};background-image:url("./assets/logo.png");border-radius:50%;`,
             href:"#"
         },[],{genericStyle:["bg_cover"]}
     )
@@ -46,7 +46,7 @@ __SYD.mobileMenuLogo = () =>{
     return __c(
         "div",
         {
-            style:`height:40px;width:60px;position:absolute;top:21px;right:${__p(["navBar" , "mobilePadState"], false) ? "10px" : "50px"};background-color:transparent;border:1px solid #171717;border-radius:5px;display:${__p(["navBar" , "desktopMode"],true) ? "none" : "block"};cursor:pointer;background-image:url(./assets/menu.png);background-size:45%;`
+            style:`height:40px;width:60px;position:absolute;top:21px;right:${__p(["navBar" , "mobilePadState"], false) ? "30px" : "50px"};background-color:transparent;border:1px solid #171717;border-radius:5px;display:${__p(["navBar" , "desktopMode"],true) ? "none" : "block"};cursor:pointer;background-image:url(./assets/menu.png);background-size:45%;`
         },[],
         {
             genericStyle:['bg_cover'],
@@ -71,7 +71,7 @@ __SYD.mobileNav = () =>{
             __c(
                 "div",
                 {
-                    style:`height:fit-content;height:100%;margin-top:${__p(["navBar" , "mobileNavExpand"], false) ? "0px" : "0px"};padding:20px 10px;display:flex;background:#000;flex-direction:column;justify-content:space-between;`
+                    style:`height:fit-content;height:100%;margin-top:${__p(["navBar" , "mobileNavExpand"], false) ? "0px" : "0px"};padding:20px 25px;display:flex;background:#000;flex-direction:column;justify-content:space-between;`
                 },
                 [
                     __c(
@@ -80,9 +80,9 @@ __SYD.mobileNav = () =>{
                             style:"display:flex;flex-direction:column;gap:30px;"
                         },
                         [
-                            __SYD.desktopNav_textContent_text({val:"Home" , ref:"#p1"}),
-                            __SYD.desktopNav_textContent_text({val:"Create" , ref:""}),///agent/create.html
-                            __SYD.desktopNav_textContent_text({val:"Docs" , ref:""}),
+                            __SYD.desktopNav_textContent_text({val:"Home" , ref:"#p1" , clr:"#fff"}),
+                            __SYD.desktopNav_textContent_text({val:"Create" , ref:"/agent/create.html" , clr:"#fff"}),//
+                            __SYD.desktopNav_textContent_text({val:"Docs" , ref:"" , clr:"#fff"}),
                         ]
                     ),
                     // __SYD.desktopNav_textContent_text({val:"tokenomics" , ref:"p6"}),
@@ -116,7 +116,7 @@ __SYD.desktopNav_textContent = () =>{
         },
         [
              __SYD.desktopNav_textContent_text({val:"Home" , ref:"#p1"}),
-            __SYD.desktopNav_textContent_text({val:"Create" , ref:""}),
+            __SYD.desktopNav_textContent_text({val:"Create" , ref:"/agent/create.html"}),
             __SYD.desktopNav_textContent_text({val:"Docs" , ref:"#"}),
             // __SYD.desktopNav_textContent_text({val:"tokenomics" , ref:"p6"}),
             // __SYD.desktopNav_textContent_text({val:"FAQ" , ref:"p7"}),
@@ -125,7 +125,7 @@ __SYD.desktopNav_textContent = () =>{
     )
 }
 
-__SYD.desktopNav_textContent_text = ({val = "home" , ref}) =>{
+__SYD.desktopNav_textContent_text = ({val = "home" , ref , clr}) =>{
     return __c(
         "div",
         {
@@ -135,12 +135,22 @@ __SYD.desktopNav_textContent_text = ({val = "home" , ref}) =>{
             __c(
                 "a",
                 {
-                    style:"font-weight:500;text-transform:capitalize;font-size:16px;",
+                    style:`font-weight:700;text-transform:capitalize;font-size:16px;transition:all linear .2s;color:${clr ? clr : "#000"};`,
                     href:`${ref}`
                 },
                 [
                     val
-                ]
+                ],
+                {
+                    events:{
+                        onmouseover:e =>{
+                            e.target.style.color = "#015484"
+                        },
+                        onmouseout:e =>{
+                            e.target.style.color = clr ? clr : "#000"
+                        },
+                    }
+                }
             )
         ]
     )

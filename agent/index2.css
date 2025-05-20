@@ -14,13 +14,13 @@
 
 .tab_design_3d_main
 {
-    border:3px solid #1d0b4e70;
+    /* border:3px solid #1d0b4e70; */
     transition:all linear .3s;
 }
 
 .tab_design_3d_main:hover
 {
-    border:3px solid #8A63F7
+    /* border:3px solid #8A63F7 */
 }
 
 .miniTabs_3d
@@ -169,7 +169,7 @@
     background: linear-gradient(
         135deg,
         #fff 49.9%,
-        #8A63F7 50%
+        #03cefc 50%
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

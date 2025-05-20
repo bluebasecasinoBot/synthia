@@ -15,13 +15,12 @@ body{
     cursor: pointer;
     transition: all linear .3s;
     background-color:transparent;
-    border: 2px solid;
 }
 .mainBtn:hover i
 {
-    background-color:#16143a;
+    /* background-color:#16143a;
     color: #fff;
-    border-color: #fff;
+    border-color: #fff; */
 }
 
 .launch_btn:hover i
@@ -48,12 +47,12 @@ input::placeholder{
 
 @font-face {
     font-family: jose;
-    src: url(../assets/Poppins-Regular.ttf);
+    src: url(../assets/DMSans_36pt-Medium.ttf);
 }
 
 @font-face {
     font-family: shine;
-    src: url(../assets/AlfaSlabOne-Regular.ttf);
+    src: url(../assets/DMSans_36pt-Medium.ttf);
 }
 
 ::-webkit-scrollbar
@@ -746,5 +745,5 @@ h1
 
 .btns_style:hover
 {
-    background:#8A63F7;
+    /* background:#8A63F7; */
 }

@@ -175,20 +175,20 @@ __SYD.createAi__start = () =>{
     return __c(
         "div",
         {
-            style:"text-decoration:none;min-width:fit-content;height:80%;display:flex;width:fit-content;align-items:center;padding:18px 30px;color:#fff;border-radius:7px;justify-content:space-between;align-items:center;border:3px solid #fff;gap:30px;transition:all linear .3s;",
+            style:"text-decoration:none;min-width:fit-content;height:80%;display:flex;width:fit-content;align-items:center;padding:18px 30px;color:#000;justify-content:space-between;align-items:center;border-radius:7px;background-color:#03cefc;gap:15px;transition:all linear .3s;",
             class:"btns_style mainBtn"
         },
         [
             __c(
                 "p",
                 {
-                    style:"font-weight:700;font-size:14px;text-align:center;"
+                    style:"font-weight:400;font-size:14px;text-align:center;"
                 },
                 [
                    "Get Started" ,
                 ]
             ),
-            __c("i",{style:"font-size:16px;display:flex;align-items:center;justify-content:center;height:30px;min-width:40px;border:2px solid;border-radius:5px;",class:"fas fa-arrow-right"})
+            __c("i",{style:"font-size:16px;display:flex;align-items:center;justify-content:center;height:30px;min-width:unset;",class:"fas fa-arrow-right"})
             
         ],
         {
@@ -209,20 +209,20 @@ __SYD.access_agent = () =>{
     return __c(
         "div",
         {
-            style:"text-decoration:none;min-width:fit-content;height:80%;display:flex;width:fit-content;align-items:center;padding:18px 30px;color:#fff;border-radius:7px;justify-content:space-between;align-items:center;border:3px solid #fff;gap:30px;transition:all linear .3s;",
+            style:"text-decoration:none;min-width:fit-content;height:80%;display:flex;width:fit-content;align-items:center;padding:18px 30px;color:#000;justify-content:space-between;align-items:center;border-radius:7px;background-color:#03cefc;gap:15px;transition:all linear .3s;",
             class:"btns_style mainBtn"
         },
         [
             __c(
                 "p",
                 {
-                    style:"font-weight:700;font-size:14px;text-align:center;"
+                    style:"font-weight:400;font-size:14px;text-align:center;"
                 },
                 [
-                   "Access Agent 🤖" ,
+                   "Use Agent" ,
                 ]
             ),
-            __c("i",{style:"font-size:16px;display:flex;align-items:center;justify-content:center;height:30px;min-width:40px;border:2px solid;border-radius:5px;",class:"fas fa-arrow-right"})
+            __c("i",{style:"font-size:16px;display:flex;align-items:center;justify-content:center;height:30px;min-width:unset;",class:"fas fa-arrow-right"})
             
         ],
         {
@@ -245,21 +245,21 @@ __SYD.verify_agent = () =>{
     return __c(
         "div",
         {
-            style:`display:flex;text-decoration:none;min-width:fit-content;width:300px;align-items:center;padding:15px 30px;color:#fff;border-radius:7px;justify-content:space-between;${__p(["fetchAgent" , "verifyingAgent"],false) ? "pointer-events:none;opacity:.4;" : ""}`,
-            class:"launch_btn"
+            style:`background:#03cefc;display:flex;text-decoration:none;min-width:fit-content;width:fit-content;gap:20px;align-items:center;padding:15px 30px;color: #000000 ;border-radius:7px;justify-content:space-between;${__p(["fetchAgent" , "verifyingAgent"],false) ? "pointer-events:none;opacity:.4;" : ""}`,
+            // class:"launch_btn"
         },
         [
             __c(
                 "p",
                 {
-                    style:"font-weight:700;font-size:14px;text-align:center;"
+                    style:"font-weight:500;font-size:14px;text-align:center;"
                 },
                 [
                    "Verify Agent Credentials" ,
                 ]
             ),
 
-            __c("i",{style:"font-size:16px;display:flex;align-items:center;justify-content:center;height:30px;width:40px;border-radius:5px;color:#fff;border:2px solid #fff;",class:"fas fa-arrow-right"})
+            __c("i",{style:"font-size:16px;display:flex;align-items:center;justify-content:center;height:30px;border-radius:5px;color: #000000 ;",class:"fas fa-arrow-right"})
         ],
         {
             events:{
@@ -274,7 +274,7 @@ __SYD.verify_agent = () =>{
 
                             // __p(['userAgentAi__sections_main' , 'setAgentVerification'])(true);
 
-                            await fetch('https://agentb-server.fly.dev/verify_agent_cred', {
+                            await fetch('https://synthia-server.fly.dev/verify_agent_cred', {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json'

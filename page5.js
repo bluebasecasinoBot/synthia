@@ -4,7 +4,7 @@ __SYD.p5 = () =>{
     return __c(
         "div",
         {
-            style:`height:fit-content;width:100%;min-height:fit-content;display:flex;justify-content:center;border:1px solid grey;` + __sC['pages'](),
+            style:`height:fit-content;width:100%;min-height:fit-content;display:flex;justify-content:center;border:1px solid #333;` + __sC['pages'](),
             id:"p5"
         },
         [
@@ -98,7 +98,7 @@ __SYD.p5_text4 = (textContent , align) =>{
         "div",
         {},
         [
-            __c("p" , {style:`${SYD_VAR.page2Text1.get()} font-family:font1;color:#fff; text-align:${align === "right" ? "left" : "right"};`},[textContent])
+            __c("p" , {style:`${SYD_VAR.page2Text1.get()} font-family:font1;color:#015484; text-align:${align === "right" ? "left" : "right"};`},[textContent])
         ]
     )
 }
@@ -108,7 +108,7 @@ __SYD.p5_text5 = (textContent , align) =>{
         "div",
         {},
         [
-            __c("p" , {style:`${SYD_VAR.pag1SubText.get()} font-weight:300;color:#fff; text-align:${align === "right" ? "left" : "right"};`},[textContent])
+            __c("p" , {style:`${SYD_VAR.pag1SubText.get()} font-weight:300;color:#000; text-align:${align === "right" ? "left" : "right"};`},[textContent])
         ]
     )
 }
@@ -146,7 +146,7 @@ __SYD.p5_tab = ({title , text , position , tab}) =>{
                     __c(
                         "p",
                         {
-                            style:"height:calc(100%); width:calc(100%); background:#000;text-align:center;display:flex;justify-content:center;align-items:center;" + SYD_VAR.page2Text2.get() + "color:#fff;font-weight:400;"
+                            style:"height:calc(100%); width:calc(100%); background:#03b3da;text-align:center;display:flex;justify-content:center;align-items:center;" + SYD_VAR.page2Text2.get() + "color:#000;font-weight:400;"
                         },
                         [
                             `#PHASE ${tab}`
@@ -163,7 +163,7 @@ __SYD.p5_tab = ({title , text , position , tab}) =>{
             __c(
                 "div",
                 {
-                    style:`height:100%;width:100%;background:#000;padding:25px 15px;border-radius:0px;border:1px solid grey;display:flex;flex-direction:column;row-gap:20px;`
+                    style:`height:100%;width:100%;background:rgb(3, 179, 218);padding:25px 15px;border-radius:0px;border:1px solid #333;border-radius:10px;display:flex;flex-direction:column;row-gap:20px;`
                 },
                 [
                     __SYD.p5_text4(title , __p(["p5SubHeader" , "breakVal"],false) ? "right" : position),
@@ -185,7 +185,7 @@ __SYD.p5_tab_center = () =>{
     return __c(
         "div",
         {
-            style:`height:calc(100% - 30px);width:3px;background:#17a7fc;position:absolute;${__p(["p5SubHeader" , "breakVal"],false) ? "left:0%" : "left:50%;transform:translateX(-50%)"};top:10px;`
+            style:`height:calc(100% - 30px);width:3px;background:#333;position:absolute;${__p(["p5SubHeader" , "breakVal"],false) ? "left:0%" : "left:50%;transform:translateX(-50%)"};top:10px;`
         }
     )
 }

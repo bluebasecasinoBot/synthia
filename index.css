@@ -39,12 +39,12 @@ a{
 }
 @font-face {
     font-family: font1;
-    src: url(./assets//IBMPlexMono-Medium.ttf);
+    src: url(./assets/DMSans_36pt-Medium.ttf);
 }
 @font-face
 {
     font-family: font2;
-    src:url(./assets/IBMPlexMono-Medium.ttf)
+    src:url(./assets/DMSans_36pt-Medium.ttf)
 }
 
 .target_div
@@ -60,8 +60,8 @@ a{
     position: absolute;
     top: 0;
     right: 0;
-    border-top:3px dashed #17a7fc;
-    border-right:3px dashed #17a7fc;
+    border-top:3px dashed #015484;
+    border-right:3px dashed #015484;
 }
 
 .target_div::before
@@ -72,8 +72,8 @@ a{
     position: absolute;
     bottom: 0;
     left: 0;
-    border-bottom:3px dashed #17a7fc;
-    border-left:3px dashed #17a7fc;
+    border-bottom:3px dashed #015484;
+    border-left:3px dashed #015484;
 }
 
 .p2_tab

@@ -8,16 +8,16 @@ __SYD.createAI__sections_main = () =>{
             style:`height:100vh;width:100%;display:${__p(["createAI__sections_main" , "display"] , false) ? "flex" : "none"};justify-content:center;align-items:flex-start;min-height:100vh;`
         },
         [
-            __c(
-                "h2",
-                {
-                    style:"font-size:18px;color:#fff;font-weight:900;text-transform:capitalize;margin-bottom:16px;position:absolute;left:50%;transform:translateX(-50%);top:10px;font-family:shine;text-shadow:2px 2px 1px #141414;text-align:center;z-index:200;width:100%;",
-                    class:"spaceCharacters"
-                },
-                [
-                    `${__p(["createAI__sections_main" , "topText"] , "Customize Agent")}`
-                ]
-            ),
+            // __c(
+            //     "h2",
+            //     {
+            //         style:"font-size:18px;color:#fff;font-weight:900;text-transform:capitalize;margin-bottom:16px;position:absolute;left:50%;transform:translateX(-50%);top:10px;font-family:shine;text-shadow:2px 2px 1px #141414;text-align:center;z-index:200;width:100%;",
+            //         class:"spaceCharacters"
+            //     },
+            //     [
+            //         `${__p(["createAI__sections_main" , "topText"] , "Customize Agent")}`
+            //     ]
+            // ),
             __SYD.createAi__sections_sec1(),
             __SYD.createAi__sections_sec2()
         ],
@@ -134,7 +134,7 @@ __SYD.pageNav__btn__sec1 = () =>{
             style:"height:fit-content;width:100%;padding:16px;position:sticky;left:100%;right:16px;bottom:0px;display:flex;column-gap:16px;justify-content:space-between;pointer-events:none;flex-direction:row-reverse;"
         },
         [
-            __SYD.ul_lists_el({child:__SYD.pTag({text:"Save Agent" , class_:"clickButton" , style:SYD_VAR.buttonStyle1.get() + "pointer-events:auto;"}) , function_:{
+            __SYD.ul_lists_el({child:__SYD.pTag({text:"Proceed" , class_:"clickButton" , style:SYD_VAR.buttonStyle1.get() + "pointer-events:auto;"}) , function_:{
                 onclick:() =>{
 
                     if(Object.keys(__p(['createAI__sections_main','userInfo'])).every(val =>{return __p(['createAI__sections_main','userInfo'])[val].length > 0}))
@@ -143,7 +143,7 @@ __SYD.pageNav__btn__sec1 = () =>{
 
                         __p(["createAI__sections_main" , "display_section_2"])();
 
-                    }else 
+                    }else
                     {
                         __p(["popUp" , "displayText"])("Please complete the customisation form 😢" , "warn");
                     }
@@ -189,16 +189,16 @@ __SYD.createAi__sections_sec1 = () =>{
     return __c(
         "div",
         {
-            style:`min-height:100%;width:100%;max-height:600px;max-width:1000px;background: rgba(22, 20, 58);backdrop-filter: blur(10px);border: 1px solid rgba(0, 255, 255, 0.4);box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);border-radius:15px;border-bottom-left-radius:unset;border-bottom-right-radius:unset;padding:16px;row-gap:30px;display:${__p(["createAI__sections_main" , "section1"] , true) ? "flex" : "none"};flex-direction:column;justify-content:flex-start;overflow:scroll;position:relative;padding-top:50px;`
+            style:`min-height:100%;width:100%;max-height:600px;max-width:1000px;background: rgb(12 , 12 , 12);radius:15px;border-bottom-left-radius:unset;border-bottom-right-radius:unset;padding:16px;row-gap:30px;display:${__p(["createAI__sections_main" , "section1"] , true) ? "flex" : "none"};flex-direction:column;justify-content:flex-start;overflow:scroll;position:relative;padding-top:50px;`
         },
         [
-            __c(
-                "div",
-                {
-                    style:"display:flex;gap:30px;",
-                    class:"collapse_tabs_media"
-                },
-                [
+            // __c(
+            //     "div",
+            //     {
+            //         style:"display:flex;gap:30px;",
+            //         class:"collapse_tabs_media"
+            //     },
+            //     [
                     __SYD.infoSection({
                         text:"What do you want to name your AI?",
                         ph:"Name Your Agent ~ (Select a unique name)"
@@ -209,15 +209,15 @@ __SYD.createAi__sections_sec1 = () =>{
                         otherOptions:["Friendly" , "Professional" , "Funny" , "Neutral"],
                         mode:"editPersonality"
                     }),
-                ]
-            ),
-            __c(
-                "div",
-                {
-                    style:"display:flex;gap:30px;",
-                    class:"collapse_tabs_media"
-                },
-                [
+            //     ]
+            // ),
+            // __c(
+            //     "div",
+            //     {
+            //         style:"display:flex;gap:30px;",
+            //         class:"collapse_tabs_media"
+            //     },
+            //     [
                     __SYD.infoSection_dropDown({
                         text:"How formal should responses be?",
                         defaultOption:"select a response tone",
@@ -230,8 +230,8 @@ __SYD.createAi__sections_sec1 = () =>{
                         otherOptions:["Basechain Basics" , "Basechain Development" , "Smart Contracts" , "Crypto Trading & DeFi" , "NFTs & Digital Assets" , "Blockchain Security"],
                         mode:"editExpertise"
                     }),
-                ]
-            ),
+            //     ]
+            // ),
             __SYD.infoSection_dropDown({
                 text:"How detailed should responses be?",
                 defaultOption:"Select a response format",
@@ -253,7 +253,7 @@ __SYD.createAi__sections_sec2 = () =>{
     return __c(
         "div",
         {
-            style:`min-height:100%;width:100%;max-height:600px;max-width:1000px;background-color: rgba(22, 20, 58);background-image:url(../assets/faq.png);backdrop-filter: blur(10px);border: 1px solid rgba(0, 255, 255, 0.4);box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);border-radius:15px;border-bottom-left-radius:unset;border-bottom-right-radius:unset;padding:16px;row-gap:30px;display:${__p(["createAI__sections_main" , "section2"] , false) ? "flex" : "none"};flex-direction:column;overflow:scroll;position:relative;align-items:center;`
+            style:`min-height:100%;width:100%;max-height:600px;max-width:1000px;background-color: rgba(12 , 12 , 12);background-image:url(../assets/faq.png);backdrop-filter: blur(10px);border-radius:15px;border-bottom-left-radius:unset;border-bottom-right-radius:unset;padding:16px;row-gap:30px;display:${__p(["createAI__sections_main" , "section2"] , false) ? "flex" : "none"};flex-direction:column;overflow:scroll;position:relative;align-items:center;`
         },
         [
             __c(
@@ -275,42 +275,90 @@ __SYD.createAi__sections_sec2 = () =>{
             __c(
                 "p",
                 {
-                    style:`font-size:${__p(["subContainer" , "scaleIntro"] , false) ? "15px" : "17px"};text-align:center;font-weight:900;line-height:25px;white-space: pre-line;`
+                    style:`font-size:${__p(["subContainer" , "scaleIntro"] , false) ? "15px" : "17px"};text-align:center;font-weight:500;line-height:25px;white-space: pre-line;`
                 },
                 [
-                    "Get " , __c("span",{style:"font-family:shine;" , class:"headerMainGrad spaceCharacters"},["$ALITA "]) , "wallet and transfer token to save your customised agent"
+                    "Agent creation on Synthia is free of charge. No hidden costs, no monthly fees — simply connect and start building."
                 ]
             ),
-            __SYD.ul_lists_el({child:__SYD.pTag({text:"Get $ALITA Wallet" , class_:"clickButton" , style:SYD_VAR.buttonStyle1.get() + "pointer-events:auto;"}) , otherProp:{type:"gen_btn_cred"} , function_:{
-                onclick:(e) =>{
+            __SYD.ul_lists_el({child:__SYD.pTag({text:"Create Agent" , class_:"clickButton" , style:SYD_VAR.buttonStyle1.get() + "pointer-events:auto;"}) , otherProp:{type:"gen_btn_cred"} , function_:{
+                onclick:async (e) =>{
                     if(__p(["cred_container" , "walletAdx"],"").length === 0)
                     {
                         e.target.style.pointerEvents = "none"
                         e.target.style.opacity = ".5"
-                        __p(["createAi__sections_sec2" , "startAnimation"])();
-                        __p(["cred_container" , "un_displayFunc"])();
+                        // __p(["createAi__sections_sec2" , "startAnimation"])();
+                        // __p(["cred_container" , "un_displayFunc"])();
                         //generate wallet and save customised agents
-                        fetch('https://alita-ai-server.fly.dev/generate_wallet', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            // body: JSON.stringify(__p(['createAI__sections_main','userInfo']))
-                        })
-                        .then(response => response.json())
-                        .then(data =>{
-                            console.log('Success:', data);
-                            __p(["popUp" , "displayText"])(`wallet Generated and agent saved successfully ..`);
+                        // fetch('https://alita-ai-server.fly.dev/generate_wallet', {
+                        //     method: 'POST',
+                        //     headers: {
+                        //         'Content-Type': 'application/json'
+                        //     },
+                        //     // body: JSON.stringify(__p(['createAI__sections_main','userInfo']))
+                        // })
+                        // .then(response => response.json())
+                        // .then(data =>{
+                        //     console.log('Success:', data);
+                        //     __p(["popUp" , "displayText"])(`wallet Generated and agent saved successfully ..`);
     
-                            __p(["createAi__sections_sec2" , "endAnimation"])();
-                            __p(["cred_container" , "displayFunc"])();
-                            __p(["cred_container" , "updateCred"])(data.address);
-                        })
-                        .catch(error => {
-                            console.error('Error:', error);
-                            e.target.style.pointerEvents = "none";
-                            e.target.style.opacity = "1"
-                        });
+                        //     __p(["createAi__sections_sec2" , "endAnimation"])();
+                        //     __p(["cred_container" , "displayFunc"])();
+                        //     __p(["cred_container" , "updateCred"])(data.address);
+                        // })
+                        // .catch(error => {
+                        //     console.error('Error:', error);
+                        //     e.target.style.pointerEvents = "none";
+                        //     e.target.style.opacity = "1"
+                        // });
+
+
+
+
+                        await fetch('https://synthia-server.fly.dev/checkTxnStatus__save', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify({agentInfo:__p(['createAI__sections_main','userInfo']) , txnId:__p(['cred_container','txnId'])})
+                                })
+                                .then(response => response.json())
+                                .then(data =>{
+                                    if(data.status.includes("Failed"))
+                                    {
+                                        __p(["popUp" , "displayText"])(`${data.status}` , "error");
+
+                                        __p(['createAi__sections_sec2' , 'updateTxnText'])(data.status , true);
+
+                                    }else
+                                    {
+                                        console.log(data)
+                                        __p(['cred_container' , 'updateTrackId'])(data.trackingID);
+
+                                        __v['trackID__copy'].style.opacity = '1';
+
+                                        __v['trackID__copy'].style.pointerEvents = 'auto';
+
+                                        __p(["cred_container" , "displayFunc"])();
+
+                                        __p(["popUp" , "displayText"])(`${data.status}`);
+
+                                        __p(['createAi__sections_sec2' , 'updateTxnText'])(data.status);
+
+                                    }
+            
+                                    __p(["createAi__sections_sec2" , "endAnimation_txn"])();
+                                })
+                                .catch(error => {
+                                    // console.error('Error:', error);
+                                    e.target.style.pointerEvents = "none";
+                                    e.target.style.opacity = "1"
+                                });
+
+
+
+
+
                     }
                 }
             }}),
@@ -396,21 +444,21 @@ __SYD.infoSection = ({text = "" , ph = ""} = {}) =>{
     return __c(
         "div",
         {
-            style:"padding:20px 16px;background: #fff;box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);display:flex;flex-direction:column;row-gap:10px;border-radius:15px;width:100%;",
+            style:"padding:20px 16px;background: #000000 ;display:flex;flex-direction:column;row-gap:10px;border-radius:0px;width:100%;border:1px solid grey;",
             class:"tab_design_3d_main"
         },
         [
             __c(
                 "h2",
                 {
-                    style:"font-size:16px;color:#16143a;font-weight:900;text-transform:capitalize;margin-bottom:16px;font-family:shine;",
+                    style:"font-size:16px;color:#fff;font-weight:500;text-transform:capitalize;margin-bottom:16px;font-family:shine;",
                     class:"spaceCharacters"
                 },
                 [
                     `${text}`
                 ]
             ),
-            __SYD.input_type_text({name:"first name" , type:"text" , ph:ph , w:"500" , size:"16px" , inject:"background: #333 ;box-shadow:unset;font-family:jose;height:60px;border-radius:inherit;transform:none;color:#fff;" , cls:"launch_btn tab_design_3d" , fnc:{oninput:e =>{
+            __SYD.input_type_text({name:"first name" , type:"text" , ph:ph , w:"500" , size:"16px" , inject:"background: rgb(12 , 12 , 12) ;box-shadow:unset;font-family:jose;height:60px;border-radius:inherit;transform:none;color:#fff;border:1px solid grey;" , cls:"" , fnc:{oninput:e =>{
                 __p(['createAI__sections_main' , 'editName'])(e.target.value)
             }}}),
         ]
@@ -442,14 +490,14 @@ __SYD.infoSection_dropDown = ({text = "" , defaultOption = "" , otherOptions = [
     return __c(
         "div",
         {
-            style:"padding:20px 16px;background:#fff;box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);display:flex;flex-direction:column;row-gap:10px;border-radius:15px;width:100%;",
+            style:"padding:20px 16px;background:#000;display:flex;flex-direction:column;row-gap:10px;border-radius:0px;border:1px solid grey;width:100%;",
             class:"tab_design_3d_main"
         },
         [
             __c(
                 "h2",
                 {
-                    style:"font-size:16px;color:#16143a;font-weight:900;text-transform:capitalize;margin-bottom:16px;font-family:shine;",
+                    style:"font-size:16px;color:#fff;font-weight:500;text-transform:capitalize;margin-bottom:16px;font-family:shine;",
                     class:"spaceCharacters"
                 },
                 [
@@ -459,8 +507,8 @@ __SYD.infoSection_dropDown = ({text = "" , defaultOption = "" , otherOptions = [
             __c(
                 "select",
                 {
-                    style:"background:#333;font-family:jose;height:60px;border-radius:inherit;font-size:16px;color:#fff;cursor:pointer;transform:none;",
-                    class:"tab_design_3d"
+                    style:"background: rgb(12 , 12 , 12) ;font-family:jose;height:60px;border-radius:inherit;font-size:16px;color:#fff;cursor:pointer;transform:none;border:1px solid grey;",
+                    // class:"tab_design_3d"
                 },
                 [
                     __c(
@@ -493,13 +541,13 @@ __SYD.infoSection__radioBox = ({text = "" , options = ["Yes" , "No"] , ph = ""} 
     return __c(
         "div",
         {
-            style:"padding:20px 16px;background:#fff;display:flex;flex-direction:column;row-gap:10px;border-radius:15px;"
+            style:"padding:20px 16px;background: #000000 ;display:flex;flex-direction:column;row-gap:10px;border-radius:0px;"
         },
         [
             __c(
                 "h2",
                 {
-                    style:"font-size:16px;color:#16143a;font-weight:900;text-transform:capitalize;margin-bottom:16px;font-family:shine",
+                    style:"font-size:16px;color:#fff;font-weight:500;text-transform:capitalize;margin-bottom:16px;font-family:shine",
                     class:"spaceCharacters"
                 },
                 [
@@ -512,7 +560,7 @@ __SYD.infoSection__radioBox = ({text = "" , options = ["Yes" , "No"] , ph = ""} 
                     style:"display:flex;column-gap:10px;width:60px;justify-content:space-between;cursor:pointer;"
                 },
                 [
-                    __c("label" , {style:"font-family:jose;color:#16143a;font-size:16px;font-weight:900;width:100%;cursor:pointer;" , for:"rad1"} , [`${options[0]}`]),
+                    __c("label" , {style:"font-family:jose;color: #ffffff ;font-size:16px;font-weight:900;width:100%;cursor:pointer;" , for:"rad1"} , [`${options[0]}`]),
                     __SYD.input_type_text({id_val:"rad1" , _name:"radio_select" , type:"radio" , ph:ph , w:"500" , size:"16px" , cls:"" , fnc:{onchange:e =>{__p(['createAI__sections_main' , 'editAskQuestion'])("Yes")}}}),
                 ]
             ),
@@ -522,7 +570,7 @@ __SYD.infoSection__radioBox = ({text = "" , options = ["Yes" , "No"] , ph = ""} 
                     style:"display:flex;column-gap:10px;width:60px;justify-content:space-between;cursor:pointer;"
                 },
                 [
-                    __c("label" , {style:"font-family:jose;color:#16143a;font-size:16px;font-weight:900;width:100%;cursor:pointer;" , for:"rad2"} , [`${options[1]}`]),
+                    __c("label" , {style:"font-family:jose;color: #ffffff ;font-size:16px;font-weight:900;width:100%;cursor:pointer;" , for:"rad2"} , [`${options[1]}`]),
                     __SYD.input_type_text({id_val:"rad2" , _name:"radio_select" , type:"radio" , ph:ph , w:"500" , size:"16px" , cls:"" , fnc:{onchange:e =>{__p(['createAI__sections_main' , 'editAskQuestion'])("No")}}}),
                 ]
             ),

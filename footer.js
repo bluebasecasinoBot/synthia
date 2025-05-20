@@ -8,7 +8,7 @@ __SYD.footer_main_parent = () =>{
     return __c(
         'div',
         {
-            style:`height:fit-content;padding:${check ? "10px 50px" : "10px 10px"};padding-top:20px;padding-bottom:20px;width:100%;display:flex;flex-direction:column;row-gap:40px;padding-bottom:50px;border:1px solid grey;`,
+            style:`height:fit-content;padding:${check ? "10px 50px" : "10px 10px"};padding-top:20px;padding-bottom:20px;width:100%;display:flex;flex-direction:column;row-gap:40px;padding-bottom:50px;border:1px solid #333;`,
             id:"footer"
         },
         [
@@ -30,7 +30,7 @@ __SYD.footer_main_parent = () =>{
                     style:'display:flex;padding:10px;justify-content:center;align-items:center'
                 },
                 [
-                    __SYD.text_lib_type_p_glob_vmax({cnt:`© ${new Date().getFullYear()} All Right Reserved`,size:'12px',clr:'#fff'})
+                    __SYD.text_lib_type_p_glob_vmax({cnt:`© ${new Date().getFullYear()} All Right Reserved`,size:'12px',clr:'#000'})
                 ]
             )
         ]
@@ -44,7 +44,7 @@ __SYD.footer_main_child2 = () =>{
             style:'display:flex;height:fit-content;width:50%;min-width:fit-content;flex-direction:column;padding:10px;row-gap:20px;margin-top:50px;align-items:center;'
         },
         [
-            __SYD.text_lib_type_h1_glob({cnt:'Socials' , size:'20px' , w:'700' , inject:'text-decoration:underline;',clr:'#fff'}),
+            __SYD.text_lib_type_h1_glob({cnt:'Socials' , size:'20px' , w:'700' , inject:'text-decoration:underline;',clr:'#000'}),
             __c(
                 'div',
                 {
@@ -60,8 +60,8 @@ __SYD.footer_main_child2 = () =>{
                                 'div',
                                 {style:'display:flex;column-gap:10px;padding:5px;width:fit-content;align-items:center'},
                                 [
-                                    __SYD.iconify_20px({attr:'fa-brands fa-x-twitter' , clr :'#17a7fc'}),//<i class="fa-solid fa-envelope-open-text"></i>
-                                    __c('a',{href:"ivviera@gmail.com"},[__SYD.text_lib_type_p_glob_vmax({cnt:'Twitter', size:'14px' , w:'500',clr:'#fff'})]),
+                                    __SYD.iconify_20px({attr:'fa-brands fa-x-twitter' , clr :'#015484'}),//<i class="fa-solid fa-envelope-open-text"></i>
+                                    __c('a',{href:"ivviera@gmail.com"},[__SYD.text_lib_type_p_glob_vmax({cnt:'Twitter', size:'14px' , w:'500',clr:'#000'})]),
                                 ]
                             ),
                 
@@ -69,8 +69,8 @@ __SYD.footer_main_child2 = () =>{
                                 'div',
                                 {style:'display:flex;column-gap:10px;padding:5px;width:fit-content;align-items:center'},
                                 [
-                                    __SYD.iconify_20px({attr:'fa-brands fa-telegram' , clr :'#17a7fc'}),//<i class="fa-solid fa-phone-volume"></i>
-                                    __c('a',{href:"tel:07072111027"},[__SYD.text_lib_type_p_glob_vmax({cnt:'Telegram', size:'14px' , w:'500',clr:'#fff'})]),
+                                    __SYD.iconify_20px({attr:'fa-brands fa-telegram' , clr :'#015484'}),//<i class="fa-solid fa-phone-volume"></i>
+                                    __c('a',{href:"tel:07072111027"},[__SYD.text_lib_type_p_glob_vmax({cnt:'Telegram', size:'14px' , w:'500',clr:'#000'})]),
                                 ]
                             ),
                 
@@ -109,7 +109,7 @@ __SYD.footer_main_child3 = () =>{
             style:'display:flex;height:100%;width:30%;min-width:fit-content;background:unset;flex-direction:column;padding:10px;column-gap:30px;row-gap:30px;margin-top:50px'
         },
         [
-            __SYD.text_lib_type_h1_glob({cnt:'Navigate' , size:'20px' , w:'700' , inject:'text-decoration:underline;',clr:'#fff'}),
+            __SYD.text_lib_type_h1_glob({cnt:'Navigate' , size:'20px' , w:'700' , inject:'text-decoration:underline;',clr:'#000'}),
             __c(
                 'div',
                 {

@@ -4,23 +4,23 @@ __SYD.createIntro_tab = () =>{
     return __c(
         "div",
         {
-            style:"height:fit-content;min-height:150px;max-width:600px;width:90%;border-radius:20px;display:flex;justify-content:center;align-items:center;row-gap:30px;padding:30px 30px;flex-direction:column;background:rgba(22, 20, 58, 0.74);backdrop-filter: blur(10px);border: 1px solid #fff;box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);"
+            style:"height:fit-content;min-height:150px;max-width:600px;width:90%;border-radius:20px;display:flex;justify-content:center;align-items:center;row-gap:30px;padding:30px 30px;flex-direction:column;background:transparent;background-color:#000;border: 1px solid grey;"
         },
         [
             __c(
                 "h1",
-                {style:`color:#fff;text-align:center;font-family:shine;text-shadow:2px 2px 1px #141414;font-weight:900;position:relative;font-size:${__p(["subContainer" , "scaleIntro"] , false) ? "30px" : "35px"}` , class:"spaceCharacters"},
+                {style:`color:#fff;text-align:center;font-family:shine;text-shadow:2px 2px 1px #141414;font-weight:500;position:relative;font-size:${__p(["subContainer" , "scaleIntro"] , false) ? "30px" : "35px"}` , class:"spaceCharacters"},
                 [
-                    'Build' , " in Minutes!"
+                    "Craft Intelligence Without Code"
                 ]//__c("span",{style:"min-height:40px;min-width:40px;background-size:100%;background-image:url(../assets/buildPng.png);display:inline-block;"},[],{genericStyle:['bg_fit']}),
             ),
             __c(
                 "p",
                 {
-                    style:`font-size:${__p(["subContainer" , "scaleIntro"] , false) ? "15px" : "17px"};text-align:center;font-weight:900;line-height:25px;white-space: pre-line;text-shadow:1px 1px 2px #000;`
+                    style:`font-size:${__p(["subContainer" , "scaleIntro"] , false) ? "15px" : "17px"};text-align:center;font-weight:500;line-height:25px;white-space: pre-line;text-shadow:1px 1px 2px #000;`
                 },
                 [
-                    __c("p",{},["Unleash your creativity and build your perfect digital companion."])
+                    __c("p",{},["Create adaptive AI agents. No code. Fully yours."])
                 ]
             ),
             __SYD.createAi__start(),
