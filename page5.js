@@ -108,7 +108,7 @@ __SYD.p5_text5 = (textContent , align) =>{
         "div",
         {},
         [
-            __c("p" , {style:`${SYD_VAR.pag1SubText.get()} font-weight:300;color:#000; text-align:${align === "right" ? "left" : "right"};`},[textContent])
+            __c("p" , {style:`${SYD_VAR.pag1SubText.get()} font-weight:300;color:#02819d; text-align:${align === "right" ? "left" : "right"};`},[textContent])
         ]
     )
 }
@@ -146,7 +146,7 @@ __SYD.p5_tab = ({title , text , position , tab}) =>{
                     __c(
                         "p",
                         {
-                            style:"height:calc(100%); width:calc(100%); background:#03b3da;text-align:center;display:flex;justify-content:center;align-items:center;" + SYD_VAR.page2Text2.get() + "color:#000;font-weight:400;"
+                            style:"height:calc(100%); width:calc(100%); background:#03b3da;text-align:center;display:flex;justify-content:center;align-items:center;" + SYD_VAR.page2Text2.get() + "color:#015484;font-weight:600;"
                         },
                         [
                             `#PHASE ${tab}`

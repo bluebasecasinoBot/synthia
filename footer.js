@@ -44,7 +44,7 @@ __SYD.footer_main_child2 = () =>{
             style:'display:flex;height:fit-content;width:50%;min-width:fit-content;flex-direction:column;padding:10px;row-gap:20px;margin-top:50px;align-items:center;'
         },
         [
-            __SYD.text_lib_type_h1_glob({cnt:'Socials' , size:'20px' , w:'700' , inject:'text-decoration:underline;',clr:'#000'}),
+            __SYD.text_lib_type_h1_glob({cnt:'Socials' , size:'20px' , w:'700' , inject:'text-decoration:underline;',clr:'#015484'}),
             __c(
                 'div',
                 {
@@ -61,7 +61,7 @@ __SYD.footer_main_child2 = () =>{
                                 {style:'display:flex;column-gap:10px;padding:5px;width:fit-content;align-items:center'},
                                 [
                                     __SYD.iconify_20px({attr:'fa-brands fa-x-twitter' , clr :'#015484'}),//<i class="fa-solid fa-envelope-open-text"></i>
-                                    __c('a',{href:"ivviera@gmail.com"},[__SYD.text_lib_type_p_glob_vmax({cnt:'Twitter', size:'14px' , w:'500',clr:'#000'})]),
+                                    __c('a',{href:"ivviera@gmail.com"},[__SYD.text_lib_type_p_glob_vmax({cnt:'Twitter', size:'14px' , w:'500',clr:'#015484'})]),
                                 ]
                             ),
                 
@@ -70,7 +70,7 @@ __SYD.footer_main_child2 = () =>{
                                 {style:'display:flex;column-gap:10px;padding:5px;width:fit-content;align-items:center'},
                                 [
                                     __SYD.iconify_20px({attr:'fa-brands fa-telegram' , clr :'#015484'}),//<i class="fa-solid fa-phone-volume"></i>
-                                    __c('a',{href:"tel:07072111027"},[__SYD.text_lib_type_p_glob_vmax({cnt:'Telegram', size:'14px' , w:'500',clr:'#000'})]),
+                                    __c('a',{href:"tel:07072111027"},[__SYD.text_lib_type_p_glob_vmax({cnt:'Telegram', size:'14px' , w:'500',clr:'#015484'})]),
                                 ]
                             ),
                 
