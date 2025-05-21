@@ -285,6 +285,7 @@ __SYD.createAi__sections_sec2 = () =>{
                 onclick:async (e) =>{
                     if(__p(["cred_container" , "walletAdx"],"").length === 0)
                     {
+                        __p(["createAi__sections_sec2" , "startAnimation_txn"])()
                         e.target.style.pointerEvents = "none"
                         e.target.style.opacity = ".5"
                         // __p(["createAi__sections_sec2" , "startAnimation"])();
@@ -324,6 +325,7 @@ __SYD.createAi__sections_sec2 = () =>{
                                 })
                                 .then(response => response.json())
                                 .then(data =>{
+                                    __p(["createAi__sections_sec2" , "endAnimation_txn"])();
                                     if(data.status.includes("Failed"))
                                     {
                                         __p(["popUp" , "displayText"])(`${data.status}` , "error");
@@ -332,7 +334,6 @@ __SYD.createAi__sections_sec2 = () =>{
 
                                     }else
                                     {
-                                        console.log(data)
                                         __p(['cred_container' , 'updateTrackId'])(data.trackingID);
 
                                         __v['trackID__copy'].style.opacity = '1';
@@ -341,13 +342,12 @@ __SYD.createAi__sections_sec2 = () =>{
 
                                         __p(["cred_container" , "displayFunc"])();
 
-                                        __p(["popUp" , "displayText"])(`${data.status}`);
+                                        __p(["popUp" , "displayText"])(`Agent created successfully`);
 
-                                        __p(['createAi__sections_sec2' , 'updateTxnText'])(data.status);
+                                        __p(["createAi__sections_sec2" , "endAnimation_txn"])()
 
+                                        __p(['createAi__sections_sec2' , 'updateTxnText'])("Your synthia agent has been created and saved successfully , and will be available for use once $SYAI is launched");
                                     }
-            
-                                    __p(["createAi__sections_sec2" , "endAnimation_txn"])();
                                 })
                                 .catch(error => {
                                     // console.error('Error:', error);
@@ -380,7 +380,7 @@ __SYD.createAi__sections_sec2 = () =>{
                     class:"text_opacity_animation"
                 },
                 [
-                    __c("p" , {style:"font-family:monospace;"} , ["Please Wait , verifying txn hash ..."])
+                    __c("p" , {style:"font-family:monospace;"} , ["Please Wait , saving agent ..."])
                 ],
                 {
                     type:"loadTxn"
@@ -393,7 +393,7 @@ __SYD.createAi__sections_sec2 = () =>{
                 },
                 [
                     `${__p(['createAi__sections_sec2' , 'txnStateText'],"")}`,
-                    !__p(['createAi__sections_sec2' , 'txnStateTextMode'],false) && __p(['createAi__sections_sec2' , 'txnStateText'],"").length > 0 ? __c("p",{},["Agent Saved successFully 🎉🎉🎈"]) : ""
+                    // !__p(['createAi__sections_sec2' , 'txnStateTextMode'],false) && __p(['createAi__sections_sec2' , 'txnStateText'],"").length > 0 ? __c("p",{},["Agent Saved successFully 🎉🎉🎈"]) : ""
                 ]
             ),
             __SYD.pageNav__btn__sec2()
