@@ -346,7 +346,7 @@ __SYD.createAi__sections_sec2 = () =>{
 
                                         __p(["createAi__sections_sec2" , "endAnimation_txn"])()
 
-                                        __p(['createAi__sections_sec2' , 'updateTxnText'])("Your synthia agent has been created and saved successfully , and will be available for use once $SYAI is launched");
+                                        __p(['createAi__sections_sec2' , 'updateTxnText'])("Your synthia agent has been created and saved successfully , Agents can be accessed and used by clicking the \"Use Agent\" button on the front page");
                                     }
                                 })
                                 .catch(error => {

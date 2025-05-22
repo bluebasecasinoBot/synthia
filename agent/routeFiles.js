@@ -209,7 +209,7 @@ __SYD.access_agent = () =>{
     return __c(
         "div",
         {
-            style:"text-decoration:none;min-width:fit-content;height:80%;display:flex;width:fit-content;align-items:center;padding:18px 30px;color:#000;justify-content:space-between;align-items:center;border-radius:7px;background-color:#03cefc;gap:15px;transition:all linear .3s;opacity:.3;",
+            style:"text-decoration:none;min-width:fit-content;height:80%;display:flex;width:fit-content;align-items:center;padding:18px 30px;color:#000;justify-content:space-between;align-items:center;border-radius:7px;background-color:#03cefc;gap:15px;transition:all linear .3s;",
             class:"btns_style mainBtn"
         },
         [
@@ -228,7 +228,13 @@ __SYD.access_agent = () =>{
         {
             events:{
                 onclick: e =>{
-                     __p(["popUp" , "displayText"])(`Access Agent coming soon!` , "warn");
+                    __p(['createIntro_tabMain' , 'remove_display_func'])();
+
+                    __p(['userAgentAi__sections_main' , 'display_section_1'])();
+
+                    __p(['userAgentAi__sections_main' , 'display_func'])();
+
+                    __p(["popUp" , "displayText"])("Access your Build AI Agent 😃");
                 }
             }
         }
@@ -346,12 +352,3 @@ __SYD.hr = () =>{
         }
     )
 }
-
-
-// __p(['createIntro_tabMain' , 'remove_display_func'])();
-
-// __p(['userAgentAi__sections_main' , 'display_section_1'])();
-
-// __p(['userAgentAi__sections_main' , 'display_func'])();
-
-// __p(["popUp" , "displayText"])("Access your Build AI Agent 😃");
